@@ -45,15 +45,15 @@ Provide a list with the name(s) of the director(s) with the most Oscar wins. We 
 '''
 
 ########
-count=0
+maxx=0
 for num in win_count_dict.values():
-    if num >count:
-        count=num
+    if num >maxx:
+        maxx=num
     else:
         continue
 
 most_win_director = []
 # Add your code here
-most_win_director =[w  for w,z in win_count_dict.items() if z==4  ]
+most_win_director =[w  for w,z in win_count_dict.items() if z==maxx  ]
 
 print("most_win_director = {}".format(most_win_director))
